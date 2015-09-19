@@ -1,0 +1,7 @@
+make play button reload the page DONE
+print out number of tries remaining DONE
+add counter DONE
+add cover div with just play button 
+make submit button hide after tries are 0
+add slider
+reduce code
