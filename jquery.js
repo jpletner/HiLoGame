@@ -1,54 +1,58 @@
 $(document).ready(function() {
-
 var secretNumber = Math.floor((Math.random() * 101) + 1);
 var numAttempts = 0;
     
 console.log(secretNumber);
-
+ $('.game').hide();
+ $('.responseHeader').hide();
+ $('.tryAgainBtn').hide();
     
-$('.playBtn').hide();   
+$('.playBtn').click(function() {
+    $('.game').show();
+    $('.coverPage').hide();
+});
 
-    
-$('.guessBtn').click(function () {
-    var guess = $('.textBox').val();
+$('#guessBtn').click(function () {
+    var guess = $('#txtBox').val();
     numAttempts += 1;
     console.log(numAttempts);  
     
     if (guess == secretNumber) { 
-        $('.response').text('You guessed right! Congrats!');
-        $('.playBtn').show();
-    }
-     if (guess > secretNumber) { 
-         $('.response').text('Too high. You have ' + (3-numAttempts) + ' tries available.');
-         $('.playBtn').hide();
-    }
-    if (guess < secretNumber) { 
-         $('.response').text('Too low. You have ' + (3-numAttempts) + ' more tries available.');
-         $('.playBtn').hide();
+        $('.responseHeader').text('You guessed right! Congrats!').show();
+    } else if (guess > secretNumber) { 
+        $('.responseHeader').text('Too high. Lives = ' + (3-numAttempts)).show();
+    } else if (guess < secretNumber) { 
+         $('.responseHeader').text('Too low. Lives = ' + (3-numAttempts)).show();
     } 
     
  
     if (numAttempts == 3 && guess !== secretNumber) {
-        $('.response').append(' Sorry. Game Over.');
-        $('.playBtn').show();
+        $('.responseHeader2').text('Game Over');
+        $('.tryAgainBtn').show();
+    } else if (numAttempts == 3 && guess == secretNumber) {
+        $('.responseHeader2').text ('You guessed right! Congrats!');
+        $('.tryAgainBtn').show();
     }
+
 });
 
-    
 
-    
-$('.playBtn').click(function() {
-    location.reload(true);
+$('.tryAgainBtn').click(function() {
+        $('.coverPage').show();
+        $('.game').hide();
+        $('.responseHeader').hide();
+        $('.responseHeader2').hide();
+        $('.tryAgainBtn').hide();
 });
      
- //To be able to click return key
-    $('.txtBox').keydown(function(event) {
-        if (event.keyCode == 13) {
-            $('.guessBtn').trigger('click');
-
-        }
-    });
+//To be able to click return key for play button
     
+$(document).bind('keypress', function(e) {
+            if(e.keyCode==13){
+                 $('.playBtn').trigger('click');
+             }
+});
+
 
 });  
     

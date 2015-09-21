@@ -1,11 +1,66 @@
-
-
-h1, h3, h4, .txtBtn  {
- text-align: center;  
-    margin: 2% 2% 2% 0;
+.coverPage {
+    background-image: url(http://static2.fjcdn.com/comments/I+ve+always+loved+those+little+bastards+_931269c9706aa1e27cfcc70854f7be0a.png);
+    background-size: cover;  
+    background-repeat: no-repeat;
+    overflow:visible;
+    height: 100vh;
+    margin: 0;
+    padding: 0; 
 }
-  
-button.winP {
-   text-align: center;
+
+.title {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    text-align: center;
 }
 
+.playBtn {
+    margin-top: 5%;
+    width: 30%;
+    font-weight: 600;
+    font-size: 2.5vh;
+}
+
+.guessBtn {
+    margin-left: 5%;
+}
+
+h1 {
+    font-size: 4vh;
+    font-weight: 600;
+}
+
+.game {
+    position: absolute;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    top: 0;
+    left: 10%;
+}
+
+.mainHeader {
+    padding-left: 30px;
+    padding-bottom: 30px;  
+    font-size: 3vw;  
+}
+
+.response {
+    position: absolute;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    top: 40%;
+    left: 10%;
+}
+
+.tryAgainBtn {
+    margin-top: 2%;
+}
+
+.responseHeader2 {
+    color: crimson;
+    font-style: oblique;
+    font-weight: 600;
+}

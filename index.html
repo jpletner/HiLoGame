@@ -12,24 +12,33 @@
 </head>
 
 <body>
-
+<!--coverpage-->
+    <div class="coverPage container-fluid">
+        <div class="title">
+            <h1>Man vs. Machine - Play the Hi Lo Game!</h1>
+            <button type="button" class="btn btn-primary playBtn">Play   
+        </div>
+    </div>
 <div class="container-fluid">
-    <div class="row well">
-        <h1 class="col-md-12">It's Time to Play the Hi Lo Game!</h1>
-        <h4 class="col-md-6 col-md-offset-3">I've guessed a number between 1 and 100. You have 7 tries to guess my number. Good luck!</h4>
-    <div class="col-md-12 txtBtn">    
-        <input type="number" class=".input-lg textBox" placeholder="Enter number" autofocus>
-        
-        <button class="btn btn-success guessBtn">Submit Guess</button> 
-    </div>
+
+<!--game screen-->    
+    <div class="row well game">
+        <h2 class="col-md-12">Man vs. Machine</h2>
+        <h4 class="col-md-6 col-md-offset-3">The computer has selected a number between 1 and 100. Can you guess it in 7 attempts?</h4>
+        <h3 class="col-md-6 col-md-offset-3">Good luck!</h3>
+        <div class="col-md-12 txtBtn">    
+            <input type="number" class="input-sm txtBox" id="txtBox" placeholder="Enter number" autofocus>
+            <button type="button" id="guessBtn" class="btn btn-success guessBtn">Submit Guess</button> 
+        </div>
     </div> 
-    <div class="row center-block">
-    <div class="col-md-12">
-        <h3 class="response col-md-12"></h3>
-        <button class="btn btn-primary center-block playBtn">Play Again</button>
-    </div>
+
+<!--response screen-->    
+    <div class="response">
+            <h3 class="responseHeader"></h3>
+            <h3 class="responseHeader2  "></h3>
+            <button type="button" class="btn btn-danger tryAgainBtn">Try Again</button>
     </div> 
-    </div>
+</div>
        
     
     
