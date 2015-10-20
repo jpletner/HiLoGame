@@ -47,12 +47,9 @@ h1 {
 }
 
 .response {
-    position: absolute;
-    width: 80%;
-    margin: auto;
+    width: 100%;
     text-align: center;
-    top: 40%;
-    left: 10%;
+    margin-top: 20%;
 }
 
 .tryAgainBtn {

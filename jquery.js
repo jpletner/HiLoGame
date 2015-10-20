@@ -20,16 +20,16 @@ $('#guessBtn').click(function () {
     if (guess == secretNumber) { 
         $('.responseHeader').text('You guessed right! Congrats!').show();
     } else if (guess > secretNumber) { 
-        $('.responseHeader').text('Too high. Lives = ' + (3-numAttempts)).show();
+        $('.responseHeader').text('Too high. Lives = ' + (7-numAttempts)).show();
     } else if (guess < secretNumber) { 
-         $('.responseHeader').text('Too low. Lives = ' + (3-numAttempts)).show();
+         $('.responseHeader').text('Too low. Lives = ' + (7-numAttempts)).show();
     } 
     
  
-    if (numAttempts == 3 && guess !== secretNumber) {
+    if (numAttempts == 7 && guess !== secretNumber) {
         $('.responseHeader2').text('Game Over');
         $('.tryAgainBtn').show();
-    } else if (numAttempts == 3 && guess == secretNumber) {
+    } else if (numAttempts == 7 && guess == secretNumber) {
         $('.responseHeader2').text ('You guessed right! Congrats!');
         $('.tryAgainBtn').show();
     }
